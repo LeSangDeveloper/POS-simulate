@@ -1,0 +1,36 @@
+{
+    "env": "development",
+    "log": {
+      "appenders": {
+        "app": {
+          "type": "console"
+        },
+        "error": {
+          "type": "console"
+        },
+        "access": {
+          "type": "console"
+        }
+      },
+      "categories": {
+        "default": {
+          "appenders": [
+            "access"
+          ],
+          "level": "info"
+        },
+        "app": {
+          "appenders": [
+            "app"
+          ],
+          "level": "trace"
+        },
+        "error": {
+          "appenders": [
+            "error"
+          ],
+          "level": "error"
+        }
+      }
+    }
+  }
