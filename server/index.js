@@ -42,10 +42,8 @@ app.use(bodyParser.json());
 const routeKeys = Object.keys(routes);
 
 for (let i = 0; i < routeKeys.length; i += 1) {
-  console.log(routes)
   app.use(routes[routeKeys[i]]);
 }
-
 
 // Error Handler
 app.use(errorHandler);
