@@ -19,5 +19,5 @@ export default {
 }
 </script>
 <!-- eslint-disable -->
-<style scoped src="@/assets/css/style.css">
+<style scoped src="~/assets/css/style.css">
 </style>

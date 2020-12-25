@@ -17,7 +17,9 @@
     "core-js": "^3.6.5",
     "express-session": "^1.17.1",
     "log4js": "^6.3.0",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "vue-qrcode-component": "^2.1.1",
+    "vue-qrcode-reader": "^2.3.16"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.1.0",
