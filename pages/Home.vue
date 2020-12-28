@@ -25,7 +25,14 @@ import Inventory from '~/components/Inventory'
 import Cart from '~/components/Cart'
 import CartEmpty from '~/components/CartEmpty'
 import Sidebar from '~/components/Sidebar'
+import axios from 'axios'
+
 export default {
+  data() {
+    return {
+      info: null
+    }
+  },
   components: {
     Header,
     Counter,
@@ -36,9 +43,12 @@ export default {
   },
   mounted () {
 	setInterval(() => {
-		console.log("test interval")
-	}, 1000)
-}
+    axios
+      .get('http://localhost:8000/api/test/read')
+      .then(response => (this.info = JSON.parse(JSON.stringify(response.data))))
+    console.log(this.info)
+	}, 3000)
+ }
 }
 </script>
 
