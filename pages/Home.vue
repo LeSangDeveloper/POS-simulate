@@ -13,6 +13,8 @@
       <CartEmpty />
     </b-row>
 
+    <Sidebar />
+
   </b-container>
 </template>
 
@@ -22,15 +24,21 @@ import Counter from '~/components/Counter'
 import Inventory from '~/components/Inventory'
 import Cart from '~/components/Cart'
 import CartEmpty from '~/components/CartEmpty'
-
+import Sidebar from '~/components/Sidebar'
 export default {
   components: {
     Header,
     Counter,
     Inventory,
     Cart,
-    CartEmpty
-  }
+    CartEmpty,
+    Sidebar
+  },
+  mounted () {
+	setInterval(() => {
+		console.log("test interval")
+	}, 1000)
+}
 }
 </script>
 
