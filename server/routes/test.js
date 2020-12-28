@@ -49,4 +49,28 @@ router.get('/test/append', (req, res, next) => {
     }
 })
 
+router.get('/test/read', (req, res, next) => {
+    try {
+        fs.readFile('test.json', 'utf8', function readFileCallback(err, data) {
+            if (err) {
+                console.log(err);
+                res.send("cannot read file (no exits)")
+            } else {
+                if (data.length <= 0)
+                {
+                    res.send("cannot read file (empty")
+                }
+                else
+                {
+                    obj = JSON.parse(data);
+                    res.send(obj)
+                }
+            }
+        })
+    }
+    catch {
+
+    }
+})
+
 module.exports = router;
